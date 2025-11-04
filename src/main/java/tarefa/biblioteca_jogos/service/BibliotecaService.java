@@ -4,7 +4,7 @@ import tarefa.biblioteca_jogos.model.Jogo;
 import tarefa.biblioteca_jogos.util.CriterioOrdenacao;
 
 public class BibliotecaService {
-    private TabelaHash tabelaHash;
+    private static TabelaHash tabelaHash;
 
     public BibliotecaService(int tamanhoTabela) {
         this.tabelaHash = new TabelaHash(tamanhoTabela);
@@ -18,7 +18,7 @@ public class BibliotecaService {
         return tabelaHash.inserir(jogo);
     }
 
-    public Jogo buscarJogo(String titulo) {
+    public static Jogo buscarJogo(String titulo) {
         return tabelaHash.buscar(titulo);
     }
 

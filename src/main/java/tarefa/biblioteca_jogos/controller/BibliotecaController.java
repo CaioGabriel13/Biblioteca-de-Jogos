@@ -37,12 +37,12 @@ public class BibliotecaController {
                 }
 
     }
-    public String buscarJogos(String titulo) {
+    public String buscarJogo(String titulo) {
         if (titulo == null || titulo.trim().isEmpty()) {
             return "Erro: Título não pode ser vazio.";
         }
 
-        Jogo jogo = BibliotecaService.buscarJogos(titulo.trim());
+        Jogo jogo = BibliotecaService.buscarJogo(titulo.trim());
 
         if (jogo != null) {
             return formatarJogo(jogo);
@@ -74,21 +74,21 @@ public class BibliotecaController {
         switch (algoritmo.toUpperCase()){
             case "BUBBLE":
                 jogos = bibliotecaService.listarJogosOrdenadosBubbleSort(criterio);
-                nomeAlgoritmo = "BubbleSort";
+                nomeAlgoritimo = "BubbleSort";
                 break;
             case "INSERTION":
                 jogos = bibliotecaService.listarJogosOrdenadosInsertionSort(criterio);
-                nomeAlgoritmo = "InsertionSort";
+                nomeAlgoritimo = "InsertionSort";
                 break;
             case "QUICK":
                 jogos = bibliotecaService.listarJogosOrdenadosQuickSort(criterio);
-                nomeAlgoritmo = "QuickSort";
+                nomeAlgoritimo = "QuickSort";
                 break;
             default:
                 return "Erro: Algoritmo inválido. Use BUBBLE, INSERTION ou QUICK.";
         }
         StringBuilder sb = new StringBuilder();
-        sb.append("=== Lista de Jogos (").append(nomeAlgoritmo).append(") ===\n");
+        sb.append("=== Lista de Jogos (").append(nomeAlgoritimo).append(") ===\n");
         sb.append("Critério: ").append(criterio).append("\n");
         sb.append("Total: ").append(jogos.length).append(" jogos\n\n");
 

@@ -1,4 +1,7 @@
 package tarefa.biblioteca_jogos.util;
 
-public class CriterioOrdenacao {
+public enum CriterioOrdenacao {
+    TITULO,
+    GENERO,
+    ANO_LANCAMENTO
 }

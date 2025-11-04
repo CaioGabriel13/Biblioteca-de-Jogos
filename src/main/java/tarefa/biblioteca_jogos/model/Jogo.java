@@ -3,9 +3,9 @@ package tarefa.biblioteca_jogos.model;
 public class Jogo {
     private String titulo;
     private String genero;
-    private String anoLancamento;
+    private int anoLancamento;
 
-    public Jogo(String titulo, String genero, String anoLancamento) {
+    public Jogo(String titulo, String genero, int anoLancamento) {
         this.titulo = titulo;
         this.genero = genero;
         this.anoLancamento = anoLancamento;
@@ -27,11 +27,11 @@ public class Jogo {
         this.genero = genero;
     }
 
-    public String getAnoLancamento() {
+    public int getAnoLancamento() {
         return anoLancamento;
     }
 
-    public void setAnoLancamento(String anoLancamento) {
+    public void setAnoLancamento(int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
 
